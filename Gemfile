@@ -24,6 +24,10 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 # ログイン機能を簡単に作成
 gem 'devise'
+# flashで利用
+gem 'toastr-rails'
+# facebookログイン機能
+gem 'omniauth-facebook'
 
 
 
@@ -35,12 +39,7 @@ gem "figaro", "~> 1.1.0"
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# 本番環境
-group :production do
-  gem 'pg', '~> 0.20.0'
-  # gem 'pg'
-  gem 'rails_12factor'
-end
+
 
 # 開発環境/テスト環境
 group :development, :test do
@@ -68,3 +67,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# 本番環境
+group :production do
+  gem 'pg', '~> 0.20.0'
+  # gem 'pg'
+  # gem 'rails_12factor'
+end
